@@ -11,11 +11,13 @@ window.onload = function() {
 };
 
 function toggleClass(e) {
-	header.classList.add('headerAfter');
-	logo.classList.add('logoAfter');
-	search.classList.add('searchAfter');
-	random.classList.add('luckyAfter');
-	copyright.style.display = 'none';
+  if (query.value) {
+    header.classList.add('headerAfter');
+    logo.classList.add('logoAfter');
+    search.classList.add('searchAfter');
+    random.classList.add('luckyAfter');
+    copyright.style.display = 'none'; 
+  }
 }
 
 function requestWiki(searchTerm) {
@@ -43,7 +45,7 @@ function clearPrevious() {
 function searchQuery() {
 	const queryValue = query.value;
 	if (query.value) {
-		requestWiki(query.value)
+		requestWiki(queryValue)
 			.then(response => {
 				const keywords = response[1].slice(1);
 				const descriptions = response[2].slice(1);
