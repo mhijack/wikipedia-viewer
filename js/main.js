@@ -16,7 +16,7 @@ function toggleClass(e) {
     logo.classList.add('logoAfter');
     search.classList.add('searchAfter');
     random.classList.add('luckyAfter');
-    copyright.style.display = 'none'; 
+    copyright.style.display = 'none';
   }
 }
 
