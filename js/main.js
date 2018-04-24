@@ -76,4 +76,7 @@ function searchQuery() {
       document.body.appendChild(result);
     })
   })
+  .catch(error => {
+    document.body.textContent('Error. Please try again.');
+  })
 }
