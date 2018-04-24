@@ -44,6 +44,7 @@ function clearPrevious() {
 
 function searchQuery() {
 	const queryValue = query.value;
+	// only search if input is not empty
 	if (query.value) {
 		requestWiki(queryValue)
 			.then(response => {
